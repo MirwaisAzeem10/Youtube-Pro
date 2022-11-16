@@ -188,6 +188,7 @@ function Header() {
           >
             YouTube
           </Typography>
+          <div className='flex justify-center items-center'>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -197,6 +198,7 @@ function Header() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+          </div>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
