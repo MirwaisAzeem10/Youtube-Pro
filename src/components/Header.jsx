@@ -163,12 +163,10 @@ function Header() {
 
   return (
       
-   
-
-
 
 <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar
+        position="-webkit-sticky" style={{backgroundColor: "#FFFF", color: "#000"}}>
         <Toolbar>
           <IconButton
             size="large"
@@ -186,7 +184,7 @@ function Header() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            YouTube
+            MiruTube
           </Typography>
           <div className='flex justify-center items-center'>
           <Search>
@@ -245,14 +243,7 @@ function Header() {
       {renderMenu}
     </Box>
   
-
-
-
-
   );
-
-
-
 
   
 }
