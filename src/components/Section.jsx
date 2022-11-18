@@ -22,6 +22,11 @@ function Section() {
 
   }
 
+  const VideoFunc = () => {
+    navigate('/videos')
+
+  }
+
 
 
   return (
@@ -35,7 +40,7 @@ function Section() {
           </div>
           <div className="flex gap-4 items-center">
             <SlideshowIcon />
-            <p className="font-serif text-lg" >Videos</p>
+            <p className="font-serif text-lg" onClick={VideoFunc}>Videos</p>
           </div>
           <div className="flex gap-4 items-center">
             <ImageSearchIcon />

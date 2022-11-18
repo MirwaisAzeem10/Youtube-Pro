@@ -8,6 +8,7 @@ import Section from "./components/Section";
 import SectionOne from "./components/SectionOne";
 import Images from "./components/Images";
 import Videos from "./components/Videos";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="search/:tag" element={<SearchApi/>}/>
         <Route path="images" element={<Images/>}/>
         <Route path="videos" element={<Videos/>}/>
+        <Route path="signup" element={<SignUp/>}/>
+
       </Routes>
     </div>
   );
