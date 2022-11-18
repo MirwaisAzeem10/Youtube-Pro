@@ -27,6 +27,10 @@ function Section() {
 
   }
 
+  const HomeFunc = () => {
+    navigate('/')
+  }
+
 
 
   return (
@@ -36,7 +40,7 @@ function Section() {
         <div className="flex flex-col min-w-[300px] basis-[300px] py-10 px-5 gap-8 overflow-scroll rounded">
           <div className="flex gap-4 items-center">
             <HomeIcon />
-            <p className="font-serif text-lg">Home</p>
+            <p className="font-serif text-lg" onClick={HomeFunc}>Home</p>
           </div>
           <div className="flex gap-4 items-center">
             <SlideshowIcon />
@@ -52,8 +56,15 @@ function Section() {
           <div className="flex justify-start pt-6">
             <p className="text-[1.5rem] font-serif">Trending Videos</p>
           </div>
+          
           <MyVideos page={1} />
+          <div className="flex justify-start pt-6">
+          <p className="text-[1.5rem] font-serif">Up Coming Videos</p>
+          </div>
           <MyVideos page={2} />
+          <div className="flex justify-start pt-6">
+          <p className="text-[1.5rem] font-serif">Oldest Videos</p>
+          </div>
           <MyVideos page={3} />
         </div>
       </div>

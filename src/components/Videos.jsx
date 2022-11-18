@@ -35,7 +35,7 @@ function Videos() {
             <source src={user?.video_files[0]?.link} />
           </video>
         ))}
-      </div>
+   </div>
 
 
    </>

@@ -9,6 +9,7 @@ import SectionOne from "./components/SectionOne";
 import Images from "./components/Images";
 import Videos from "./components/Videos";
 import SignUp from "./components/SignUp";
+import SearchImages from "./components/SearchImages";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="images" element={<Images/>}/>
         <Route path="videos" element={<Videos/>}/>
         <Route path="signup" element={<SignUp/>}/>
+        <Route path="search-images" element={<SearchImages/>}/>
+
 
       </Routes>
     </div>

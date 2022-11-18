@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import Header from "./Header";
 
 function Images() {
   const [photosData, setPhotosData] = useState([]);
@@ -24,16 +25,20 @@ function Images() {
   }, []);
 
   return (
-    <div>
-      <div className="container mx-auto flex justify-start">
+    <>
+      <Header />
+      <div className="container mx-auto flex justify-start "> 
         <p className="text-[1.5rem] font-serif">Awesome Images</p>
       </div>
       <div className="container mx-auto flex justify-start items-center gap-4 mt-10 basis-full overflow-x-auto flex-wrap">
         {photosData?.photos?.map((user) => (
-          <img className="w-[20%]" src={user?.src?.original} alt={user?.alt} />
+          <div className="flex flex-col items-center gap-2">
+          <img className="w-[20%]" src={user?.src?.original} alt={user?.alt}/>
+          <p>{user.photographer}</p>
+          </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 export default Images;
