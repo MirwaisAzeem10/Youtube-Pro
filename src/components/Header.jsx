@@ -16,6 +16,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 
@@ -61,6 +62,7 @@ const Search = styled('div')(({ theme }) => ({
 
 
 function Header() {
+    const navigate = useNavigate()
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -160,6 +162,12 @@ function Header() {
     );
   
 
+    const inconFunc = () => {
+     
+     navigate('/')
+
+    }
+
 
   return (
       
@@ -183,6 +191,7 @@ function Header() {
             noWrap
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
+            onClick={inconFunc}
           >
             MiruTube
           </Typography>

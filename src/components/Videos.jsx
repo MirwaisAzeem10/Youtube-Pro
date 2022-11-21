@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState,useEffect} from "react"
+import Header from './Header';
 function Videos() {
 
     const [MyVideos, setMyVideos] = useState([]);
@@ -26,6 +27,7 @@ function Videos() {
 
   return (
    <>
+   <Header/>
    <div className='container mx-auto flex justify-start'>
      <p className='text-[1.5rem] font-serif'>Videos</p>
    </div>
