@@ -27,14 +27,14 @@ function Images() {
   return (
     <>
       <Header />
-      <div className="container mx-auto flex justify-start "> 
+      <div className="container mx-auto flex justify-start py-5">   
         <p className="text-[1.5rem] font-serif">Awesome Images</p>
       </div>
-      <div className="container mx-auto flex justify-start items-center gap-4 mt-10 basis-full overflow-x-auto flex-wrap">
+      <div className="container mx-auto flex  items-center gap-4 mt-10 basis-full overflow-x-auto flex-wrap">
         {photosData?.photos?.map((user) => (
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-col col-span-4">
           <img className="w-[20%]" src={user?.src?.original} alt={user?.alt}/>
-          <p>{user.photographer}</p>
+          {/* <p>{user.photographer}</p> */}
           </div>
         ))}
       </div>
