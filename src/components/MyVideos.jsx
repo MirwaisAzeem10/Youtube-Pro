@@ -25,25 +25,26 @@ function MyVideos({ page }) {
   }, []);
 
   console.log("videosData", videosData);
-  
-  
-  const openVideo = () => {
-    navigate('view-page')
-  }
 
-
+  const openVideo = (values) => {
+    navigate("view-page", { state: values });
+  };
 
   return (
     <>
       <div className="flex justify-start items-start gap-4 mt-10 basis-full overflow-x-auto flex-wrap">
         {videosData?.videos?.map((user) => (
-          <video className="rounded" width="350" height="500" controls onClick={openVideo}>
+          <video
+            className="rounded"
+            width="350"
+            height="500"
+            controls
+            onClick={() => openVideo(user)}
+          >
             <source src={user?.video_files[0]?.link} />
-            
           </video>
         ))}
       </div>
-      
     </>
   );
 }

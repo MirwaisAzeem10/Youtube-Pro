@@ -11,6 +11,7 @@ import Videos from "./components/Videos";
 import SignUp from "./components/SignUp";
 import SearchImages from "./components/SearchImages";
 import ViewPage from "./components/ViewPage";
+import ImageView from "./components/ImageView";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
         <Route path="signup" element={<SignUp/>}/>
         <Route path="search-images" element={<SearchImages/>}/>
         <Route path="view-page" element={<ViewPage/>}/>
+        <Route path="image-view" element={<ImageView/>}/>
+
 
 
 

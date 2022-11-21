@@ -1,8 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 
 function Images() {
+  const navigate = useNavigate();
   const [photosData, setPhotosData] = useState([]);
 
   const Key = "563492ad6f9170000100000114f3daaaec3d490ba2dd0f5f40147b37";
@@ -24,6 +26,12 @@ function Images() {
     getData();
   }, []);
 
+
+  const openImage = (values) => {
+    navigate("view-page", { state: values });
+  };
+
+
   return (
     <>
       <Header />
@@ -33,7 +41,7 @@ function Images() {
       <div className="container mx-auto flex  items-center gap-4 mt-10 basis-full overflow-x-auto flex-wrap">
         {photosData?.photos?.map((user) => (
           <div className="flex flex-col col-span-4">
-          <img className="w-[20%]" src={user?.src?.original} alt={user?.alt}/>
+          <img className="w-[20%]" src={user?.src?.original} alt={user?.alt}  onClick={() => openImage(user)}/>
           {/* <p>{user.photographer}</p> */}
           </div>
         ))}
