@@ -17,7 +17,7 @@ return (
       />
     </video> */}
 
-    <img src={location?.state?.photos[0]?.src}    alt=''/>
+    <img src={location?.state?.photos[0].photographer_id}  type="image"  alt=''/>
   </div>
 
 

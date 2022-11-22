@@ -28,7 +28,8 @@ function Images() {
 
 
   const openImage = (values) => {
-    navigate("view-page", { state: values });
+    navigate("image-view", { state: values });
+    console.log(values)
   };
 
 
@@ -42,7 +43,7 @@ function Images() {
         {photosData?.photos?.map((user) => (
           <div className="flex flex-col col-span-4">
           <img className="w-[20%]" src={user?.src?.original} alt={user?.alt}  onClick={() => openImage(user)}/>
-          {/* <p>{user.photographer}</p> */}
+          <p>{user.photographer}</p>
           </div>
         ))}
       </div>

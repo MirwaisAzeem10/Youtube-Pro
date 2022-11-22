@@ -10,7 +10,7 @@ import SectionOne from "./SectionOne";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 import { useNavigate } from "react-router-dom";
-
+import CollectionsIcon from '@mui/icons-material/Collections';
 
 function Section() {
 
@@ -31,6 +31,11 @@ function Section() {
     navigate('/')
   }
 
+  const collectFunc = () => {
+   
+    navigate('/collection')
+
+  }
 
 
   return (
@@ -50,6 +55,10 @@ function Section() {
             <ImageSearchIcon />
             <p className="font-serif text-lg" onClick={ImageFunc}>Images</p>
           </div>
+          <div className="flex gap-4 items-center">
+            <CollectionsIcon />
+            <p className="font-serif text-lg" onClick={collectFunc}>Collections</p>
+          </div>
         </div>
         <div className="flex flex-col gap-4">
           <SectionOne />
@@ -66,6 +75,10 @@ function Section() {
           <p className="text-[1.5rem] font-serif">Oldest Videos</p>
           </div>
           <MyVideos page={3} />
+          <div className="flex justify-start pt-6">
+          <p className="text-[1.5rem] font-serif">Collection</p>
+          </div>
+          <MyVideos page={4} />
         </div>
       </div>
     </>
