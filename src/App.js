@@ -13,6 +13,9 @@ import SearchImages from "./components/SearchImages";
 import ViewPage from "./components/ViewPage";
 import ImageView from "./components/ImageView";
 import Collection from "./components/Collection";
+import Profile from "./components/Profile";
+import Footer from "./components/Footer";
+import Edit from "./components/Edit"
 
 function App() {
   return (
@@ -24,16 +27,14 @@ function App() {
         <Route path="search/:tag" element={<SearchApi/>}/>
         <Route path="images" element={<Images/>}/>
         <Route path="videos" element={<Videos/>}/>
-        <Route path="signup" element={<SignUp/>}/>
+        {/* <Route path="signup" element={<SignUp/>}/> */}
         <Route path="search-images" element={<SearchImages/>}/>
         <Route path="view-page" element={<ViewPage/>}/>
         <Route path="image-view" element={<ImageView/>}/>
         <Route path="collection" element={<Collection/>}/>
-
-
-
-
-
+        <Route path="my-profile" element={<Profile/>}/>
+        <Route path="edit" element={<Edit/>}/>
+        <Route path="footer" element={<Footer/>}/>
       </Routes>
     </div>
   );

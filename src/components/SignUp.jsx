@@ -1,63 +1,85 @@
 import React from "react";
+// import {useState} from "react"
+// import { addDoc,collection } from "firebase/firestore";
+// import { db } from "../firebase.config";
+// import { ref, set } from "firebase/database";
+
+
 
 function SignUp() {
+  // const [password, setPassword] = useState("");
+  // const [firstName, setFirstName] = useState(""); 
+  // const [lastName, setLastName] = useState("");
+  // const [myEmail, setMyEmail] = useState("");
+  // const signupCollectionRef = collection(db, "signup");
+
+  // const SignUp = () => {
+  //   addDoc(signupCollectionRef, {
+  //     firstname: firstName,
+  //     lastname: lastName,
+  //     email: myEmail,
+  //     password: password,
+      
+  //   });
+  // };
+
   return (
-    <>
-      <form className="">
-        <div class="mb-6">
-          <label
-            for="email"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Your email
-          </label>
+    <form className="flex justify-center items-center">
+      <div className="container mx-auto flex flex-col gap-2 bg-[#FFFFFF] shadow-xl p-2 w-[25%]">
+        <div className="flex justify-start ">
+          <p className="text-[1.5rem] font-bold">Sign Up</p>
+        </div>
+        <div className="flex justify-start">
+          <p>it's quick and easy.</p>
+        </div>
+        <div>
+          <hr className="border-[1px] w-full" />
+        </div>
+        <div className="flex  flex-row items-center gap-4 pt-5">
           <input
+            name="firstName"
+            className="p-2 border-[1px] w-[100%] rounded"
+            type="text"
+            placeholder="firstname"
+           
+          />
+          <input
+            name="lastName"
+            className="p-2 border-[1px] w-[100%] rounded"
+            type="text"
+            placeholder="lastname"
+           
+          />
+        </div>
+        <div className="flex justify-start items-start text-start">
+          <input
+            name="email"
+            className="p-2  w-[100%] border-[1px] rounded"
             type="email"
-            id="email"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="name@flowbite.com"
-            required
+            placeholder="Mobile number or email"
+            
           />
         </div>
-        <div class="mb-6">
-          <label
-            for="password"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Your password
-          </label>
+        <div className="flex justify-start items-start text-start">
           <input
+            className="p-2  w-[100%] border-[1px] rounded"
             type="password"
-            id="password"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            required
+            name="password"
+            placeholder="New password"
+            
           />
         </div>
-        <div class="flex items-start mb-6">
-          <div class="flex items-center h-5">
-            <input
-              id="remember"
-              type="checkbox"
-              value=""
-              class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-              required
-            />
-          </div>
-          <label
-            for="remember"
-            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        <div className="py-4">
+          <button
+            className="w-[40%] bg-[#00A400] text-white
+         rounded p-2 text-lg font-bold"
+        
           >
-            Remember me
-          </label>
+            Sign Up
+          </button>
         </div>
-        <button
-          type="submit"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Submit
-        </button>
-      </form>
-    </>
+      </div>
+    </form>
   );
 }
 

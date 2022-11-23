@@ -81,7 +81,16 @@ function Header() {
     const handleMenuClose = () => {
       setAnchorEl(null);
       handleMobileMenuClose();
+      navigate('/signup')
     };
+
+
+    const profileFunc = () => {
+      navigate('/my-profile')
+
+    }
+
+
   
     const handleMobileMenuOpen = (event) => {
       setMobileMoreAnchorEl(event.currentTarget);
@@ -104,8 +113,8 @@ function Header() {
         open={isMenuOpen}
         onClose={handleMenuClose}
       >
-        <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-        <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+        <MenuItem onClick={profileFunc}>Profile</MenuItem>
+        <MenuItem    onClick={handleMenuClose}>My account</MenuItem>
       </Menu>
     );
   
@@ -174,7 +183,7 @@ function Header() {
 
 <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position="-webkit-sticky" style={{backgroundColor: "#FFFF", color: "#000"}}>
+        position="sticky" style={{backgroundColor: "#FFFF", color: "#000"}}>
         <Toolbar>
           <IconButton
             size="large"
